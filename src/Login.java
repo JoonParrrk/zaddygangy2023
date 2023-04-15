@@ -24,6 +24,10 @@ public class Login {
         return username;
     }
 
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
     public String getPassword() {
         return password;
     }
