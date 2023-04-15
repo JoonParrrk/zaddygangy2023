@@ -1,8 +1,11 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Course {
     private String courseName;
-    private ArrayList<Tasks> quizzes;
+    private HashSet<Task> exams;
+    private HashSet<Task> quizzes;
+    private HashSet<Task> assignments;
 
     public String getCourseName() {
         return courseName;
@@ -12,48 +15,45 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public ArrayList<Tasks> getQuizzes() {
+    public ArrayList<Task> getQuizzes() {
         return quizzes;
     }
 
-    public void setQuizzes(ArrayList<Tasks> quizzes) {
+    public void setQuizzes(ArrayList<Task> quizzes) {
         this.quizzes = quizzes;
     }
 
-    public ArrayList<Tasks> getExams() {
+    public ArrayList<Task> getExams() {
         return exams;
     }
 
-    public void setExams(ArrayList<Tasks> exams) {
+    public void setExams(ArrayList<Task> exams) {
         this.exams = exams;
     }
 
-    public ArrayList<Tasks> getProjects() {
+    public ArrayList<Task> getProjects() {
         return projects;
     }
 
-    public void setProjects(ArrayList<Tasks> projects) {
+    public void setProjects(ArrayList<Task> projects) {
         this.projects = projects;
     }
 
-    public ArrayList<Tasks> getAssignments() {
+    public ArrayList<Task> getAssignments() {
         return assignments;
     }
 
-    public void setAssignments(ArrayList<Tasks> assignments) {
+    public void setAssignments(ArrayList<Task> assignments) {
         this.assignments = assignments;
     }
 
-    private ArrayList<Tasks> exams;
-    private ArrayList<Tasks> projects;
-    private ArrayList<Tasks> assignments;
+    private ArrayList<Task> exams;
+    private ArrayList<Task> projects;
+    private ArrayList<Task> assignments;
 
     Course(String name) {
         courseName = name;
-        quizzes = new ArrayList<Tasks>();
-        exams = new ArrayList<Tasks>();
-        projects = new ArrayList<Tasks>();
-        assignments = new ArrayList<Tasks>();
+
     }
 
 

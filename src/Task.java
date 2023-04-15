@@ -1,11 +1,11 @@
-public class Tasks {
+public class Task {
     String projName;
     double minScore;
     double maxScore;
     double currScore;
     int deadline;
 
-    Tasks(String name, double minScore, double maxScore, double currScore, int deadline) {
+    Task(String name, double minScore, double maxScore, double currScore, int deadline) {
         this.projName = name;
         this.maxScore = minScore;
         this.maxScore = maxScore;
