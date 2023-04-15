@@ -3,12 +3,14 @@ public class Tasks {
     double minScore;
     double maxScore;
     double currScore;
+    int deadline;
 
-    Tasks(String name, double minScore, double maxScore, double currScore) {
+    Tasks(String name, double minScore, double maxScore, double currScore, int deadline) {
         this.projName = name;
         this.maxScore = minScore;
         this.maxScore = maxScore;
         this.currScore = currScore;
+        this.deadline = deadline;
     }
 
     public String getProjName() {
