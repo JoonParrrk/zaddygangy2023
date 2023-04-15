@@ -10,4 +10,19 @@ public class Course {
     }
 
 
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public ArrayList<Tasks> getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(ArrayList<Tasks> taskList) {
+        this.taskList = taskList;
+    }
 }
