@@ -5,6 +5,8 @@ public class User {
     private ArrayList<Course> courses;
     private List<StudySession> StudyTimes;
 
+    private double userNum;
+
     public User() {
         StudyTimes = new ArrayList<StudySession>();
         courses = new ArrayList<Course>();
