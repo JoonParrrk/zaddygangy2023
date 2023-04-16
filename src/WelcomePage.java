@@ -60,6 +60,7 @@ public class WelcomePage {
         panel3.setName("Study Sessions");
         panel3.add(new JLabel("How many hours would you like to study?", SwingConstants.CENTER));
 
+
         studySession = new JTextField();
         studySession.setPreferredSize(new Dimension(250, 40));
         submit = new JButton("Submit");
@@ -73,9 +74,10 @@ public class WelcomePage {
                                  });
 
 
-                panel3.add(studySession);
+        panel3.add(studySession);
         panel3.add(submit);
 
+        ImageIcon imageIcon = new ImageIcon("C:/Users/moham/Downloads/logo.png");
 
 
         JTabbedPane tabbedPane = new JTabbedPane(); // Add the panel to the frame
