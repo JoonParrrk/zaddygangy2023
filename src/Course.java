@@ -36,12 +36,13 @@ public class Course {
         this.goalGrade = goalGrade;
     }
 
-    public double getCurrentGrade(HashSet<Task> exams, HashSet<Task> quizzes,HashSet<Task> assignments,
+    public void setCurrentGrade(HashSet<Task> exams, HashSet<Task> quizzes,HashSet<Task> assignments,
                                   HashSet<Task> projects, HashMap<String, Double> weight, double extraCredit) {
 
-        double grade = GradeCalc.getCurrentGrades(exams, quizzes,assignments, projects, weight, extraCredit);
-
-        return grade;
+        currentGrade = GradeCalc.getCurrentGrades(exams, quizzes,assignments, projects, weight, extraCredit);
+    }
+    public double getCurrentGrade() {
+        return currentGrade;
     }
 
     public double getExtraCredit() {
