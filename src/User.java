@@ -2,11 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-
+    private ArrayList<Course> courses;
     private List<StudySession> StudyTimes;
 
     public User() {
-        StudyTimes = new ArrayList<>();
+        StudyTimes = new ArrayList<StudySession>();
+        courses = new ArrayList<Course>();
     }
     
     public void addStudySession(StudySession session) {
@@ -21,7 +22,4 @@ public class User {
      * Ignore 
      */
 
-     for(int i = 0; i < 5; i++) {
-        System.out.println(i);
-     }
 }
