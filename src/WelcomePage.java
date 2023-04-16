@@ -1,15 +1,17 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
 
 public class WelcomePage {
-
+    private JTextField studySession;
+    private JButton submit;
     private JTabbedPane panel;
-
-    WelcomePage(String userID){
+    WelcomePage(String userID) {
 
 //        JLabel welcomeLabel = new JLabel("Hello!");
 //        JFrame frame = new JFrame();
@@ -34,7 +36,7 @@ public class WelcomePage {
                 super.paintComponent(g);
                 try {
                     JTabbedPane panel = new JTabbedPane();
-                    Image image = ImageIO.read(new File("C:/Users/15155/Downloads/logo2.png"));
+                    Image image = ImageIO.read(new File("C:/Users/moham/Downloads/logo.png"));
                     g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
                     g.setFont(new Font("Arial", Font.BOLD, 25));
                     g.drawString("Hello " + userID + "!", 20, 30);
@@ -47,6 +49,7 @@ public class WelcomePage {
 
 
 
+
         JPanel panel1 = new JPanel();
         panel1.setName("Tasks");
         panel1.add(new JLabel("This is the content of tab 1", SwingConstants.CENTER));
@@ -54,8 +57,25 @@ public class WelcomePage {
         panel2.setName("Calendar");
         panel2.add(new JLabel("This is the content of tab 2", SwingConstants.CENTER));
         JPanel panel3 = new JPanel();
-        panel3.setName("Deadlines");
-        panel3.add(new JLabel("This is the content of tab 3", SwingConstants.CENTER));
+        panel3.setName("Study Sessions");
+        panel3.add(new JLabel("How many hours would you like to study?", SwingConstants.CENTER));
+
+        studySession = new JTextField();
+        studySession.setPreferredSize(new Dimension(250, 40));
+        submit = new JButton("Submit");
+        submit.addActionListener(new ActionListener() {
+                                     @Override
+                                     public void actionPerformed(ActionEvent e) {
+                                         if (e.getSource() == submit) {
+                                             System.out.println("Your study session has been submitted!");
+                                         }
+                                     }
+                                 });
+
+
+                panel3.add(studySession);
+        panel3.add(submit);
+
 
 
         JTabbedPane tabbedPane = new JTabbedPane(); // Add the panel to the frame
@@ -70,6 +90,12 @@ public class WelcomePage {
         frame.getContentPane().add(tabbedPane);
         frame.pack();
         frame.setVisible(true);
+
+//        public java.awt.event.ActionListener actionPerformed(ActionEvent e) {
+//            if(e.getSource() == submit) {
+//                System.out.println("Your study session was submitted!");
+//            }
+//        }
 
 
 

@@ -17,10 +17,11 @@ public class LoginPage implements ActionListener {
     JLabel titleLabel = new JLabel("Login Page");
     JLabel messageLabel = new JLabel();
     HashMap<String, String> logininfo = new HashMap<String, String>();
+    IDandPasswords hashy = new IDandPasswords();
 
-    LoginPage(HashMap<String, String> loginInfoOriginal) {
+    LoginPage() {
 
-        logininfo = loginInfoOriginal;
+        logininfo = hashy.getLoginInfo();
 
         titleLabel.setBounds(125, 20, 200, 25);
         titleLabel.setFont(new Font("Roboto", Font.BOLD, 20));
