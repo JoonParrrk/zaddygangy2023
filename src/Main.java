@@ -1,15 +1,23 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Moe");
-        System.out.println("JOON");
-        
-        for(int i = 0; i < 9; i++) {
-            System.out.println(i);
-        }
+        String username = "";
+        String password = "";
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Please create a username: ");
+        username = scan.nextLine();
+        System.out.println("Please create a password: ");
+        password = scan.nextLine();
+
+        Login loginInfo = new Login(username, password);
+
+        System.out.println(loginInfo.getPassword());
+        System.out.println(loginInfo.getUsername());
+
 
     }
 }
