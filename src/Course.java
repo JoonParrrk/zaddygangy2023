@@ -5,16 +5,32 @@ import java.util.HashSet;
 public class Course {
     private String courseName;
     private double extraCredit;
+    /*
+    User's goal grade
+     */
     private double goalGrade;
+    /*
+    User's grade right now. Should be 0 but can ask GradeCalc.getCurrentGrades to calculate the currentGrade.
+     */
     private double currentGrade;
     private HashSet<Task> exams;
     private HashSet<Task> quizzes;
     private HashSet<Task> assignments;
     private HashSet<Task> projects;
-   // hardcoded for HASHMAP. EXAM/QUIZ/ASSIGNMENT/PROJECTS = VALUE
+   /*
+    hardcoded for HASHMAP. EXAM/QUIZ/ASSIGNMENT/PROJECTS = VALUE
+
+    EX) Key: "Exam1", Value: 20 ------> means Exam1 contributes 20% of the course grade.
+        Key: "Quiz",  Value: 10 ------> All the quizzes for the entire course should contribute 10% of the course grade.
+    */
    private HashMap<String, Double> weight;
 
-
+    /**
+     *
+     * @param name: courseName
+     * @param extraCredit: case when extraCredit exists
+     * @param goalGrade: your goal Grade
+     */
     Course(String name, double extraCredit, double goalGrade) {
         courseName = name;
         exams = new HashSet<>();
@@ -25,6 +41,11 @@ public class Course {
         this.extraCredit = extraCredit;
         this.goalGrade = goalGrade;
     }
+    /**
+     *
+     * @param name: courseName
+     * @param goalGrade: your goal Grade
+     */
     Course(String name, double goalGrade) {
         courseName = name;
         exams = new HashSet<>();
