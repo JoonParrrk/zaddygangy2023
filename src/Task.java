@@ -1,23 +1,13 @@
-import java.util.Date;
-
 public class Task {
-    private String projName;
-    private double minScore;
-    private double maxScore;
-    private double currScore;
-    private Date deadline;
+    String projName;
+    double minScore;
+    double maxScore;
+    double currScore;
+    int deadline;
 
-    /**
-     *
-     * @param name: name of the assignment: Ex) Quiz3 or Homework2.
-     * @param minScore: Mininum score you can get.
-     * @param maxScore: Maximum score you can get.
-     * @param currScore: CurrentScore right now. If your score hasn't been set up, set to -1.
-     * @param deadline: DeadLine date
-     */
-    Task(String name, double minScore, double maxScore, double currScore, Date deadline) {
+    Task(String name, double minScore, double maxScore, double currScore, int deadline) {
         this.projName = name;
-        this.minScore = minScore;
+        this.maxScore = minScore;
         this.maxScore = maxScore;
         this.currScore = currScore;
         this.deadline = deadline;
