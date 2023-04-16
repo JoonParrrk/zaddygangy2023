@@ -4,12 +4,11 @@ public class Login {
 
     private String password;
 
-    private int accountNumber;
+    //private int accountNumber;
 
-    public Login(String username, String password, int accountNumber) {
+    public Login(String username, String password) {
         this.username = username;
         this.password = password;
-        this.accountNumber = accountNumber;
     }
 
     public void setUsername(String username) {
@@ -24,16 +23,16 @@ public class Login {
         return username;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
+//    public void setAccountNumber(int accountNumber) {
+//        this.accountNumber = accountNumber;
+//    }
 
     public String getPassword() {
         return password;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
-    }
+//    public int getAccountNumber() {
+//        return accountNumber;
+//    }
     
 }
