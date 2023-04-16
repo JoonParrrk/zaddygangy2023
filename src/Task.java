@@ -7,7 +7,7 @@ public class Task {
 
     Task(String name, double minScore, double maxScore, double currScore, int deadline) {
         this.projName = name;
-        this.maxScore = minScore;
+        this.minScore = minScore;
         this.maxScore = maxScore;
         this.currScore = currScore;
         this.deadline = deadline;
