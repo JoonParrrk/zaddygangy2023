@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,5 +8,9 @@ public class Main {
         System.out.println("Moe");
 
         System.out.println(Calender.CurrentDateTime());
+
+        Date dNow = new Date( );
+        System.out.println("Current Date: " + dNow);
+
     }
 }
